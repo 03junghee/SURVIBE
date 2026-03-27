@@ -3,8 +3,7 @@
   "builds": [
     {
       "src": "survibe/wsgi.py",
-      "use": "@vercel/python",
-      "config": { "runtime": "python3.12" }
+      "use": "@vercel/python"
     }
   ],
   "routes": [
@@ -12,6 +11,5 @@
       "src": "/(.*)",
       "dest": "survibe/wsgi.py"
     }
-  ],
-  "installCommand": "pip install -r requirements.txt"
+  ]
 }

@@ -1,35 +1,65 @@
-import os  # 상단에 추가해 주세요 (경로 설정용)
+import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# 1. 보안 설정: 배포 시에는 반드시 False로!
-DEBUG = False 
+# [수정] 직접 키를 입력하여 'Secret Key must not be empty' 에러 해결
+SECRET_KEY = 'django-insecure-p1gb#-q(g*%kbtdip$*a0c*m4#*_^dj&=02-#kah^idt&3umly'
 
-# 2. 허용 호스트: 모든 접속을 허용하거나 Vercel 주소를 넣습니다.
-ALLOWED_HOSTS = ['*'] 
+# [수정] 배포 시에는 False, 접속 허용은 전체('*')
+DEBUG = False
+ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
-    # DB 기능을 안 쓰면 사실 아래 5개는 지워도 무방하지만, 
-    # 기본 관리자 기능을 위해 남겨두셔도 빌드 에러는 안 납니다.
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'main',
+    'main', 
 ]
 
-# 3. 데이터베이스: 아예 비워두면 에러가 날 수 있으니 기본값을 유지하되,
-# 실제로 파일이 생성되지 않도록 Vercel 환경에서는 무시되게 둡니다.
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware', # 정적 파일 처리를 위해 추가 추천
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
 
-# 4. 정적 파일 설정 (Vercel 배포 필수)
-STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # 이 줄을 추가하세요.
+ROOT_URLCONF = 'survibe.urls'
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+
+WSGI_APPLICATION = 'survibe.wsgi.application'
+
+# [수정] DB 미사용 시 에러 방지를 위해 비워둠
+DATABASES = {}
+
+LANGUAGE_CODE = 'ko-kr'
+TIME_ZONE = 'Asia/Seoul'
+USE_I18N = True
+USE_TZ = True
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

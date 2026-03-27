@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUR-VIBE | AI 바이브 코딩 스터디</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Pretendard', sans-serif; scroll-behavior: smooth; }
+        .neon-border { box-shadow: 0 0 15px rgba(34, 211, 238, 0.4); }
+        .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%); }
+        .variety-gradient { background: linear-gradient(90deg, #22d3ee, #818cf8); }
+        .card-hover:hover { transform: translateY(-10px); transition: all 0.3s ease; border-color: #22d3ee; }
+    </style>
+</head>
+<body class="gradient-bg text-white">
+
+    <nav class="fixed w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-black tracking-tighter text-cyan-400">SUR-VIBE</div>
+            <div class="hidden md:flex space-x-8 font-bold text-sm">
+                <a href="#about" class="hover:text-cyan-400 transition">WHY WE</a>
+                <a href="#curriculum" class="hover:text-cyan-400 transition">CURRICULUM</a>
+                <a href="#info" class="hover:text-cyan-400 transition">INFO</a>
+                <a href="https://forms.gle/45AAet5jtNvoRc4W7" target="_blank" class="text-cyan-400 border border-cyan-400 px-4 py-1 rounded-full hover:bg-cyan-400 hover:text-slate-900 transition">지원하기</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative pt-32 pb-20 px-6 overflow-hidden">
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <span class="inline-block px-4 py-1 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 font-bold mb-6 animate-pulse">
+                📌 어떤 학과도 내 인생에 AI 100% 활용 가능
+            </span>
+            <h1 class="text-5xl md:text-8xl font-black mb-8 leading-tight">
+                제.대.로 <span class="text-transparent bg-clip-text variety-gradient">벼락치기</span><br>할 사람 모여라
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
+                코딩 문법 배우다 포기하셨나요? 우리는 배우지 않습니다. <br>
+                <span class="text-white font-bold underline decoration-cyan-400 italic">"그냥 AI로 결과물을 찍어냅니다."</span>
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="https://forms.gle/45AAet5jtNvoRc4W7" class="variety-gradient px-10 py-5 rounded-2xl font-black text-xl hover:scale-105 transition shadow-lg shadow-cyan-500/20">
+                    지금 바로 합류하기
+                </a>
+                <a href="#curriculum" class="bg-slate-800 border border-slate-700 px-10 py-5 rounded-2xl font-black text-xl hover:bg-slate-700 transition">
+                    과정 살펴보기
+                </a>
+            </div>
+        </div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-cyan-500/10 rounded-full blur-[120px] -z-10"></div>
+    </section>
+
+    <section id="about" class="py-20 px-6 bg-slate-900/50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-black mb-12 text-center">WHY <span class="text-cyan-400">SUR-VIBE?</span></h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="p-8 rounded-3xl bg-slate-800/50 border border-slate-700 card-hover">
+                    <div class="text-4xl mb-4 text-cyan-400">⚡</div>
+                    <h3 class="text-xl font-bold mb-3 italic underline decoration-cyan-400">문법 말고 결과물</h3>
+                    <p class="text-slate-400 leading-relaxed text-sm">기초 쌓다 지치는 코딩은 그만. 당장 내일 써먹는 결과물을 우선합니다.</p>
+                </div>
+                <div class="p-8 rounded-3xl bg-slate-800/50 border border-slate-700 card-hover">
+                    <div class="text-4xl mb-4 text-cyan-400">🚀</div>
+                    <h3 class="text-xl font-bold mb-3 italic underline decoration-cyan-400">진입장벽 제로</h3>
+                    <p class="text-slate-400 leading-relaxed text-sm">코딩 지식 0이어도 OK. 무료 생성형 AI 툴만으로 양질의 결과물을 만듭니다.</p>
+                </div>
+                <div class="p-8 rounded-3xl bg-slate-800/50 border border-slate-700 card-hover">
+                    <div class="text-4xl mb-4 text-cyan-400">🤝</div>
+                    <h3 class="text-xl font-bold mb-3 italic underline decoration-cyan-400">현장 밀착 해결</h3>
+                    <p class="text-slate-400 leading-relaxed text-sm">막히면 포기하는 비전공자를 위해 오프라인에서 직접 같이 고치고 실행합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="curriculum" class="py-20 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-black mb-16 text-center italic uppercase tracking-widest">Master Curriculum</h2>
+            
+            <div class="space-y-12">
+                <div class="relative pl-12 border-l-2 border-slate-700">
+                    <div class="absolute -left-3 top-0 w-6 h-6 rounded-full bg-slate-700"></div>
+                    <h4 class="text-slate-500 font-bold mb-2">1개월차 - AI 기본기</h4>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="p-6 bg-slate-800/40 rounded-2xl border border-slate-700 card-hover">
+                            <span class="text-xs text-slate-500 block mb-1">0회차 | OT</span>
+                            <p class="font-bold">AI 툴 체험 & 끝장 비교</p>
+                            <p class="text-sm text-slate-400 mt-2">ChatGPT vs Claude vs Gemini 실무 최강자는?</p>
+                        </div>
+                        <div class="p-6 bg-slate-800/40 rounded-2xl border border-slate-700 card-hover">
+                            <span class="text-xs text-slate-500 block mb-1">1회차 | 프롬프트</span>
+                            <p class="font-bold">프롬프트 심폐소생술</p>
+                            <p class="text-sm text-slate-400 mt-2">역할+맥락+형식! 나쁜 질문도 같이 고쳐봅니다.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative pl-12 border-l-2 border-cyan-400">
+                    <div class="absolute -left-3 top-0 w-6 h-6 rounded-full bg-cyan-400 neon-border"></div>
+                    <h4 class="text-cyan-400 font-bold mb-2">2개월차 - 주제별 실전</h4>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="p-6 bg-slate-800/40 rounded-2xl border border-slate-700 card-hover">
+                            <span class="text-xs text-slate-500 block mb-1">2회차 | 자료정리</span>
+                            <p class="font-bold text-sm">정보 → 구조 자동화</p>
+                            <p class="text-xs text-slate-400 mt-2">A4 10장을 1장으로 요약하기</p>
+                        </div>
+                        <div class="p-6 bg-slate-800/40 rounded-2xl border border-slate-700 card-hover">
+                            <span class="text-xs text-slate-500 block mb-1">3회차 | 학습특화</span>
+                            <p class="font-bold text-sm">NotebookLM 정복</p>
+                            <p class="text-xs text-slate-400 mt-2">강의자료에서 예상문제 추출하기</p>
+                        </div>
+                        <div class="p-6 bg-slate-800/40 rounded-2xl border border-slate-700 card-hover">
+                            <span class="text-xs text-slate-500 block mb-1">4회차 | 취준</span>
+                            <p class="font-bold text-sm">자소서 & 공고분석</p>
+                            <p class="text-xs text-slate-400 mt-2">날것의 경험을 자소서로 변신</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative pl-12 border-l-2 border-cyan-500">
+                    <div class="absolute -left-3 top-0 w-6 h-6 rounded-full bg-cyan-500 shadow-[0_0_15px_#22d3ee]"></div>
+                    <h4 class="text-white font-bold mb-4 flex items-center">
+                        <span class="bg-cyan-500 text-slate-900 text-xs px-2 py-0.5 rounded mr-2">FINAL</span>
+                        3개월차 - 응용 & 공유
+                    </h4>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="p-6 bg-slate-800/60 rounded-2xl border border-cyan-500/30 card-hover shadow-[0_10px_30px_rgba(34,211,238,0.1)]">
+                            <span class="text-xs text-cyan-400 block mb-1 font-bold">5회차 | 실전 프로젝트</span>
+                            <p class="font-bold text-lg">나만의 'AI 비서' 루틴 만들기</p>
+                            <p class="text-sm text-slate-400 mt-2 leading-relaxed">
+                                복잡한 루틴(뉴스레터 요약, 매일 아침 일정 정리 등)을 AI로 자동화하는 개인별 맞춤 프롬프트 엔지니어링 수행
+                            </p>
+                        </div>
+                        <div class="p-6 bg-slate-800/60 rounded-2xl border border-cyan-500/30 card-hover shadow-[0_10px_30px_rgba(34,211,238,0.1)]">
+                            <span class="text-xs text-cyan-400 block mb-1 font-bold">6회차 | 네트워킹 & 공유</span>
+                            <p class="font-bold text-lg">SUR-VIBE : 파이널 쇼케이스</p>
+                            <p class="text-sm text-slate-400 mt-2 leading-relaxed">
+                                3개월간 AI로 해결한 성과 공유 및 나만의 프롬프트 모음집(VIBE-Log) 완성 및 수료
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 flex items-center text-xs text-slate-500 italic">
+                        <span class="mr-2">※ 이후 회차는 스터디원들의 진도와 관심도에 따라 커스텀 운영됩니다.</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="info" class="py-20 px-6 bg-cyan-900/10 border-y border-cyan-900/30">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-slate-900 p-8 md:p-12 rounded-[40px] border border-cyan-500/30 shadow-2xl">
+                <h2 class="text-3xl font-black mb-8 text-center italic uppercase">Basic Info</h2>
+                <div class="space-y-6 text-slate-300">
+                    <div class="flex justify-between border-b border-slate-800 pb-4 text-sm md:text-base">
+                        <span class="font-bold text-white">모집인원 / 대상</span>
+                        <span>6명 내외 / AI 자신 없는 누구나</span>
+                    </div>
+                    <div class="flex justify-between border-b border-slate-800 pb-4 text-sm md:text-base">
+                        <span class="font-bold text-white">진행 기간</span>
+                        <span>3개월 (총 7회차)</span>
+                    </div>
+                    <div class="flex justify-between border-b border-slate-800 pb-4 text-sm md:text-base">
+                        <span class="font-bold text-white">모임 빈도</span>
+                        <span>주 1회 (월 3회 대면 필수)</span>
+                    </div>
+                    <div class="flex justify-between border-b border-slate-800 pb-4 text-sm md:text-base">
+                        <span class="font-bold text-white">모집 기간</span>
+                        <span>03.25(수) ~ 04.28(화)</span>
+                    </div>
+                </div>
+                <div class="mt-12 text-center">
+                    <a href="https://forms.gle/45AAet5jtNvoRc4W7" class="inline-block variety-gradient px-12 py-5 rounded-full font-black text-2xl hover:scale-110 transition shadow-2xl">
+                        JOIN THE VIBE 📌
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-slate-500 text-sm">
+        <p class="mb-4 font-bold text-cyan-400 tracking-widest">SUR-VIBE : DESIGN YOUR LOGIC</p>
+        <div class="flex justify-center space-x-6">
+            <a href="https://open.kakao.com/o/s3MP37mi" class="hover:text-white transition">KakaoTalk 문의</a>
+            <span>|</span>
+            <span>Study Lab in Seoul</span>
+        </div>
+    </footer>
+
+</body>
+</html>
